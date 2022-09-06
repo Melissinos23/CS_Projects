@@ -38,8 +38,8 @@ function draw()
   }
 
   //if(y<200){ x--; }
-  //a=x/5;
-  //b=y/2;
+  a=x/5;
+  b=y/2;
   background(0);
   fill(a, y, x);
   ellipse(x, y, 2*a, 2*b);
