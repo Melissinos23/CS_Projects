@@ -8,5 +8,3 @@ My favourite things:
  - computers
  - math
  - juggling
-
- [http://marlborough.org](My school)
