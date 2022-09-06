@@ -9,4 +9,5 @@ My favourite things:
  - math
  - juggling
 
-<a href="https://melissinos23.github.io/CS_Projects/" target="_blank">Live Site</a>
+
+<a href="https://melissinos23.github.io/CS_Projects/" target="_blank"> Live site</a>
