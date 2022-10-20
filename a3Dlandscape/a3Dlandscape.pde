@@ -13,7 +13,7 @@ void setup(){
   size(1000,800,P3D);
   
   
-  brightness[0] = map(noise(tx, ty), 0, 1, 0, 255);
+  //brightness[0] = map(noise(tx, ty), 0, 1, 0, 255);
   
   display();
 }
@@ -26,7 +26,7 @@ void draw(){
 
 void display(){
   background(255);
-  for (int i = 1; i < bLength; i++) {
+  //for (int i = 1; i < bLength; i++) {
    //print("i");
    for (int x = 0; x < width; x++) {
      ty = 0;
@@ -40,5 +40,5 @@ void display(){
       }
       tx += 0.01;
     }
-  }
+  //}
 }
