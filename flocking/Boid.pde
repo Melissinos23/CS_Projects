@@ -10,7 +10,7 @@ class Boid {
   // Maximum speed
 
     // This is a new PVector method not yet implemented in JS
-   velocity = PVector.random2D();
+    // velocity = PVector.random2D();
 
 
 
