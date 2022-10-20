@@ -20,6 +20,13 @@ class Particle {
     ellipse(pos.x, pos.y, 25, 25);
   }
   
+  void touch(ArrayList<Particle> particles){
+    for(Particle p : particles){
+      if(dist(pos.x, pos.y, p.pos.x, p.pos.y) < 0.1){
+      }
+    }
+  }
+  
   void update(){
     
     fSpring.x = k*(init-pos.x);
@@ -29,12 +36,13 @@ class Particle {
       fSpring.y = -0.01;
     }
     
-    print(vel.y + "   ");
+    //print(vel.y + "   ");
     PVector fOrbit = new PVector();
  
     
     vel.add(fSpring);
     pos.add(vel);
+
     
     if(pos.y > height){
       pos.y = -50;
