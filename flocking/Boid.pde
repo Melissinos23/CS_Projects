@@ -6,14 +6,34 @@ class Boid {
    PVector velocity;
    PVector acceleration;
    
-  // Maximum steering force
-  // Maximum speed
+   float r;
+   // Maximum steering force
+   float maxSteer;
+   // Maximum speed
+   float maxSpeed;
 
     // This is a new PVector method not yet implemented in JS
     // velocity = PVector.random2D();
+     Boid(float x, float y){
+       acceleration = new PVector(0, 0);
+       
+       float angle = random(TWO_PI);
+       
+       velocity = new PVector(cos(angle), sin(angle));
+       
+       position = new PVector(x, y);
+       
+       //change these when I feel like it
+       r = 2.0;
+       maxSteer = 0.3;
+       maxSpeed = 2.0;
+     }
 
+    void run(ArrayList<Boid> boids){
+      //run all of my functions
+    }
 
-
+    void applyForce(PVector 
     // We could add mass here if we want A = F / M
 
   // We accumulate a new acceleration each time based on three rules
