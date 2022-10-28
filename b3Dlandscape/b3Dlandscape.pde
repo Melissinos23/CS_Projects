@@ -40,6 +40,7 @@ void update(ArrayList<PVector> points){
     //p.y += noise(p.x, p.z, t/5);
     p.y = map(noise(p.x/70, p.z/70, t), 0, 1, 0, 255);
 
+    p.y = noise(p.x/70, p.z/70, t) * 255;
     //p.y = height/3 + noise(p.x, p.z, t/1000);
     //p.y = height/3 + t/1000;
   }
@@ -47,7 +48,9 @@ void update(ArrayList<PVector> points){
 
 void display(ArrayList<PVector> points){
   for(PVector p : points){
-    strokeWeight(6);
+    //strokeWeight(25);    //no gaps
+    //strokeWeight(6);    //some gaps
+    //strokeWeight(1.5);    //normal (a little thicker than 1)
     stroke(p.z, 500-p.x, 500-p.y);
     point(p.x, height - p.y, p.z);
   }
