@@ -37,8 +37,8 @@ void draw(){
 void update(ArrayList<PVector> points){
   for(PVector p : points){
     //p.y = map(noise(p.x, p.z, t/1000), 0, 1, 0, 255);
-    p.y += noise(p.x, p.z, t/5);
-    //p.y = map(noise(p.x/70, p.z/70, t), 0, 1, 0, 255);
+    //p.y += noise(p.x, p.z, t/5);
+    p.y = map(noise(p.x/70, p.z/70, t), 0, 1, 0, 255);
 
     //p.y = noise(p.x/70, p.z/70, t) * 255;
     //p.y = height/3 + noise(p.x, p.z, t/1000);
