@@ -21,7 +21,7 @@ void setup() {
 void draw() {
 
   t = millis()/10000.; //millis() is int
-  background(255);
+  background(0);
 
   display(points, w);
 
@@ -53,11 +53,11 @@ void update(ArrayList<PVector> points) {
 void display(ArrayList<PVector> points, float w) {
   for (PVector p : points) {
     //strokeWeight(25);    //no gaps
-    strokeWeight(10);
+    //strokeWeight(10);
     //strokeWeight(6);    //some gaps
-    //strokeWeight(3);    //normal (a little thicker than 1)
+    strokeWeight(3);    //normal (a little thicker than 1)
     //strokeWeight(w);    //funky changing one
-    stroke(400-p.z, 700-p.x, 550-p.y, 450-p.z);
+    stroke(400-p.z, 750-p.x, 600-p.y, 650-p.z);
     //higher numbers, lighter colors
     point(p.x, height - p.y, p.z);
   }
