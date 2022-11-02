@@ -57,7 +57,7 @@ void display(ArrayList<PVector> points, float w) {
     //strokeWeight(6);    //some gaps
     //strokeWeight(3);    //normal (a little thicker than 1)
     //strokeWeight(w);    //funky changing one
-    stroke(p.z, 800-p.x, 800-p.y, 750-p.z);
+    stroke(p.z, 650-p.x, 650-p.y, 750-p.z);
     point(p.x, height - p.y, p.z);
   }
 }
