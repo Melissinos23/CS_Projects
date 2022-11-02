@@ -51,9 +51,9 @@ void update(ArrayList<PVector> points){
 
 void display(ArrayList<PVector> points, float w){
   for(PVector p : points){
-    //strokeWeight(25);    //no gaps
+    strokeWeight(25);    //no gaps
     //strokeWeight(6);    //some gaps
-    strokeWeight(1.25);    //normal (a little thicker than 1)
+    //strokeWeight(1.25);    //normal (a little thicker than 1)
     //strokeWeight(w);    //funky changing one
     stroke(p.z, 500-p.x, 500-p.y);
     point(p.x, height - p.y, p.z);
