@@ -43,7 +43,7 @@ void update(ArrayList<PVector> points) {
     //p.y += noise(p.x, p.z, t/5);
     //p.y = map(noise(p.x/70, p.z/70, t), 0, 1, 0, 255);
 
-    p.y = map(noise(p.x/70, p.z/70, t), 0, 1, 0, 700);
+    p.y = map(noise(p.x/70, p.z/70, t), 0, 1, 0, 600);
     //p.y = noise(p.x/70, p.z/70, t) * 255;
     //p.y = height/3 + noise(p.x, p.z, t/1000);
     //p.y = height/3 + t/1000;
@@ -57,7 +57,8 @@ void display(ArrayList<PVector> points, float w) {
     //strokeWeight(6);    //some gaps
     //strokeWeight(3);    //normal (a little thicker than 1)
     //strokeWeight(w);    //funky changing one
-    stroke(p.z, 650-p.x, 650-p.y, 750-p.z);
+    stroke(400-p.z, 700-p.x, 550-p.y, 450-p.z);
+    //higher numbers, lighter colors
     point(p.x, height - p.y, p.z);
   }
 }
