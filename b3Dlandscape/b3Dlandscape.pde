@@ -7,8 +7,10 @@ int counter;
 void setup() {
 
   background(255);
-  size(1000, 800, P3D);
-
+  //size(1000, 800, P3D);
+  
+  fullScreen(P3D);
+  
   points = new ArrayList<PVector>();
 
 
@@ -20,7 +22,7 @@ void setup() {
 
 void draw() {
 
-  t = millis()/10000.; //millis() is int
+  t = millis()/50000.; //millis() is int
   background(0);
 
   display(points, w);
@@ -64,8 +66,8 @@ void display(ArrayList<PVector> points, float w) {
 }
 
 void init(ArrayList<PVector> points) {
-  for (int x = 0; x < width; x += 3) {
-    for (int z = 0; z < height; z += 3) {
+  for (int x = 0; x < width; x += 4) {
+    for (int z = 0; z < height; z += 4) {
       points.add(new PVector(x, height/3, z));
     }
   }
