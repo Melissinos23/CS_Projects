@@ -3,50 +3,38 @@ ArrayList<PVector> points2;
 ArrayList<PVector> points3;
 
 
-float t, w;
+float t;
 
 int counter;
 
 void setup() {
 
   background(0);
-  //size(1000, 800, P3D);
   
   fullScreen(P3D);
   
   points = new ArrayList<PVector>();
-  points3 = new ArrayList<PVector>();
+  points2 = new ArrayList<PVector>();
   points3 = new ArrayList<PVector>();
 
   init(points, height/5);
   init(points2, height/4);
   init(points3, height/3);
-
-  counter = 0;
-  w = 1;
   
   background(0);
 }
 
-/*void draw() {
+void draw() {
 
   t = millis()/50000.; //millis() is int
   background(0);
 
-  display(points, 1);
+  /*display(points, 1);
   display(points2, 2);
   display(points3, 3);
 
-  if (counter%5 == 0) { 
-    //update(points);
-  }
-  update(points, 1);
-  counter++;
-  //w += 0.2;
-
-  //for(PVector p : points){ print(p.y + "   "); }
-  //print(t + "  ");
-}*/
+  update(points, 1);*/
+}
 
 
 void update(ArrayList<PVector> points, int type) {
