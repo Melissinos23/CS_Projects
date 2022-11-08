@@ -73,7 +73,8 @@ void display(ArrayList<PVector> points, int type) {
       stroke(p.z, 500-p.x, 500-p.y, 500-p.z);
       //stroke(400-p.z, 750-p.x, 600-p.y, 650-p.z);
     } else if(type == 2){
-      stroke(100);
+      //stroke(100);
+      stroke(600-p.z, 600-p.x, 700-p.y, 500-p.z);
       //stroke(400-p.z, 750-p.x, 600-p.y, 650-p.z);
     } else if(type == 3){
       stroke(50);
