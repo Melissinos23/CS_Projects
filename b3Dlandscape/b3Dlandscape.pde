@@ -6,7 +6,7 @@ int counter;
 
 void setup() {
 
-  background(255);
+  background(0);
   //size(1000, 800, P3D);
   
   fullScreen(P3D);
@@ -18,6 +18,8 @@ void setup() {
 
   counter = 0;
   w = 1;
+  
+  background(0);
 }
 
 void draw() {
