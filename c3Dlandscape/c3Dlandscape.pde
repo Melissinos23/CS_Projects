@@ -26,7 +26,7 @@ void setup() {
 
 void draw() {
 
-  t = millis()/50000.; //millis() is int
+  t = millis()/5000.; //millis() is int
   background(0);
 
   display(points, 1);
@@ -47,11 +47,11 @@ void update(ArrayList<PVector> points, int type) {
     //p.y = map(noise(p.x/70, p.z/70, t), 0, 1, 0, 255);
 
     if(type == 1){
-      p.y = map(noise(p.x/70, p.z/70, t), 0, 1, (height/5)-100, height/5);
+      p.y = map(noise(p.x/70, p.z/70, t), 0, 1, (height/5)-100, (height/5)+100);
     } else if(type == 2){
-      p.y = map(noise(p.x/70, p.z/70, t-10), 0, 1, (height/2)-100, height/2);
+      p.y = map(noise(p.x/70, p.z/70, t-10), 0, 1, (height/2)-200, (height/2)+100);
     } else if(type == 3) {
-      p.y = map(noise(p.x/70, p.z/70, t-20), 0, 1, 4*(height/6)-100, 4*(height/6));
+      p.y = map(noise(p.x/70, p.z/70, t-20), 0, 1, 4*(height/6)-100, 4*(height/6) + 100);
     }
     //p.y = noise(p.x/70, p.z/70, t) * 255;
     //p.y = height/3 + noise(p.x, p.z, t/1000);
@@ -70,17 +70,20 @@ void display(ArrayList<PVector> points, int type) {
     if(type == 1){       // need to pick colors
       //stroke(255);
       //bi flag
-      //stroke(p.z, 500-p.x, 500-p.y, 500-p.z);
+      stroke(p.z, 500-p.x, 500-p.y, 500-p.z);
       //reddish
-      stroke(255, 700-p.x, 200-p.y, 300-p.y);
+      //stroke(255, 700-p.x, 200-p.y, 300-p.y);
       //stroke(400-p.z, 750-p.x, 600-p.y, 650-p.z);
     } else if(type == 2){
       //stroke(100);
-      stroke(400-p.z, 450-p.x, 700-p.y, 500-p.z);
+      //teal-green
+      stroke(255-p.y, 255, 255-p.z, 200-p.z);
       //stroke(400-p.z, 750-p.x, 600-p.y, 650-p.z);
     } else if(type == 3){
-      stroke(50);
-      //stroke(400-p.z, 750-p.x, 600-p.y, 650-p.z);
+      //stroke(50);
+      //bi people!
+      //stroke(
+      stroke(400-p.z, 750-p.x, 600-p.y, 650-p.z);
     } else {
       stroke(400-p.z, 750-p.x, 600-p.y, 650-p.z); //old one
     }
@@ -90,8 +93,8 @@ void display(ArrayList<PVector> points, int type) {
 }
 
 void init(ArrayList<PVector> points, int y) {
-  for (int x = 0; x < width; x += 17) {
-    for (int z = 0; z < height; z += 17) {
+  for (int x = 0; x < width; x += 10) {
+    for (int z = 0; z < height; z += 10) {
       points.add(new PVector(x, y, z));
     }
   }
