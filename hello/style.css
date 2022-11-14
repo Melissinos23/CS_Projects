@@ -1,0 +1,21 @@
+
+/* nobody remembers all css --> look stuff up */
+/* push this */
+
+h1 {
+  /* color red */
+  color: green; /* can also use rgb */
+  font-size: 2em;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+p.special {
+  background-color: #eee;
+}
+
+ul.special {
+  background-color: #eee;
+}
